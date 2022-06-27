@@ -2,38 +2,48 @@
             <p>You can contact me here</p>
 						<br />
 						<br />
-						<form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
-						<script type="text/javascript">
-						function ValidateForm(frm) {
-						if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
-						if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
-						if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
-						if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
-						return true; }
-						</script>
-						<table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
-						<tr> <td>
-						<label for="Name">Name*:</label>
-						</td> <td>
-						<input name="Name" type="text" maxlength="60" style="width:100%;max-width:250px;" />
-						</td> </tr> <tr> <td>
-						<!--<label for="PhoneNumber">Phone number:</label>-->
-						</td> <td>
-						<!--<input name="PhoneNumber" type="text" maxlength="43" style="width:100%;max-width:250px;" />-->
-						</td> </tr> <tr> <td>
-						<label for="FromEmailAddress">Email address*:</label>
-						</td> <td>
-						<input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
-						</td> </tr> <tr> <td>
-						<label for="Comments">Comments*:</label>
-						</td> <td>
-						<textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
-						</td> </tr> <tr> <td>
-						* - required fields
-						</td> <td>
+						<form method="post" action="//submit.form" onSubmit="return validateForm();">
+						<div style="max-width: 400px;">
+						</div>
+						<div style="padding-bottom: 18px;">Your Name<span style="color: red;"> *</span><br/>
+						<input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control"/>
+						</div>
+						<div style="padding-bottom: 18px;">Your Email<span style="color: red;"> *</span><br/>
+						<input type="text" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+						</div>
+						<div style="padding-bottom: 18px;">Message<span style="color: red;"> *</span><br/>
+						<textarea id="data_3" false name="data_3" style="max-width : 450px;" rows="6" class="form-control"></textarea>
+						</div>
+						<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+						<div>
 						<!--<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>-->
-						<input name="skip_Submit" type="submit" value="Submit" />
-						<script src="https://www.100forms.com/js/FORMKEY:AJA7GN4GQK6L/SEND:mike.m1emf@gmail.com" type="text/javascript"></script>
-						</td> </tr>
-						</table>
+						<script src="https://www.100forms.com/js/FORMKEY:JGUXPJ7PCLM7" type="text/javascript"></script>
+						</div>
 						</form>
+
+						<script type="text/javascript">
+						function validateForm() {
+						if (isEmpty(document.getElementById('data_1').value.trim())) {
+						alert('Your Name is required!');
+						return false;
+						}
+						if (isEmpty(document.getElementById('data_2').value.trim())) {
+						alert('Your Email is required!');
+						return false;
+						}
+						if (!validateEmail(document.getElementById('data_2').value.trim())) {
+						alert('Your Email must be a valid email address!');
+						return false;
+						}
+						if (isEmpty(document.getElementById('data_3').value.trim())) {
+						alert('Message is required!');
+						return false;
+						}
+						return true;
+						}
+						function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+						function validateEmail(email) {
+						var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+						return isEmpty(email) || re.test(email);
+						}
+						</script>
