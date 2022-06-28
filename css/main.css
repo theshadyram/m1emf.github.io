@@ -219,3 +219,8 @@ a:active {
 .rTableBody {
 	display: table-row-group;
 }
+
+/*email*/
+.domain::before {
+	content: "\0040";    /* Unicode character for @ symbol */
+}
