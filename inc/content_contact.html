@@ -1,57 +1,5 @@
 			<h2>Contact Me</h2>
             <p>You can contact me here</p>
 						<br />
+						<p><a href="javascript:location='mailto:\u006d\u0069\u006b\u0065\u002e\u006d\u0031\u0065\u006d\u0066\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0069\u006b\u0065\u002e\u006d\u0031\u0065\u006d\u0066\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a></p>
 						<br />
-						<form method="post" action="submit.form" onSubmit="return validateForm();">
-						<div style="max-width: 400px;">
-						</div>
-						<div style="display: flex; padding-bottom: 18px;max-width : 450px;">
-						<div style=" margin-left: 0; margin-right: 1%; width: 49%;">First Name<span style="color: red;"> *</span><br/>
-						<input type="text" id="data_1" name="data_1" style="max-width: 100%;" class="form-control"/>
-						</div>
-						<div style=" margin-left: 1%; margin-right: 0; width: 49%;">Last Name<span style="color: red;"> *</span><br/>
-						<input type="text" id="data_2" name="data_2" style="max-width: 100%;" class="form-control"/>
-						</div>
-						</div><div style="padding-bottom: 18px;">Your Email<span style="color: red;"> *</span><br/>
-						<input type="text" id="data_3" name="data_3" style="max-width : 450px;" class="form-control"/>
-						</div>
-						<div style="padding-bottom: 18px;">Message<span style="color: red;"> *</span><br/>
-						<textarea id="data_4" false name="data_4" style="max-width : 450px;" rows="6" class="form-control"></textarea>
-						</div>
-						<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Send" type="submit"/></div>
-						<div>
-						<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-						<script src="https://www.100forms.com/js/FORMKEY:Z2DMCSFQ3N6K" type="text/javascript"></script>
-						</div>
-						</form>
-
-						<script type="text/javascript">
-						function validateForm() {
-						if (isEmpty(document.getElementById('data_1').value.trim())) {
-						alert('First Name is required!');
-						return false;
-						}
-						if (isEmpty(document.getElementById('data_2').value.trim())) {
-						alert('Last Name is required!');
-						return false;
-						}
-						if (isEmpty(document.getElementById('data_3').value.trim())) {
-						alert('Your Email is required!');
-						return false;
-						}
-						if (!validateEmail(document.getElementById('data_3').value.trim())) {
-						alert('Your Email must be a valid email address!');
-						return false;
-						}
-						if (isEmpty(document.getElementById('data_4').value.trim())) {
-						alert('Message is required!');
-						return false;
-						}
-						return true;
-						}
-						function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-						function validateEmail(email) {
-						var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-						return isEmpty(email) || re.test(email);
-						}
-						</script>
