@@ -83,11 +83,14 @@ article {
     color:#000; /* Text colour on hover */
 	text-shadow: none !important;
 }
+/*
 .mainHeader nav li a {
-	/*border-radius: 5px;
+	border-radius: 5px;
 	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;*/
+	-webkit-border-radius: 5px;
 }
+*/
+
 .mainHeader img {
 	width: 100%;
 	height: auto;
@@ -123,12 +126,12 @@ a:active {
  ** MAIN NAVIGATION
 */
  /* unvisited link */
-. menu a:link {
+.menu a:link {
     /*color: #443d96;*/
 	color: #BCD74A;
 }
 /* visited link */
-. menu a:visited {
+.menu a:visited {
     /*color: #443d96;*/
 	color: #BCD74A;
 }
